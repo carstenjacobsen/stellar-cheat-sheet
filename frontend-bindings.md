@@ -36,9 +36,7 @@ pnpm add file:./packages/<project_name>
 ## Use Bindings
 This example is a simplified version of a contract function call in the [guestbook sample dapp](https://developers.stellar.org/docs/build/apps/guestbook), but it serves well as an example of how the bindings can be implemented.
 
-First the package is imported, and a guestbook client is instantiated, with the appropriate network settings, in this case testnet.
-
-The read_message() contract function can now be invoked using the guestbook binding client.
+First the package is imported, and a guestbook client is instantiated, with the appropriate network settings, in this case testnet. The read_message() contract function can now be invoked using the guestbook binding client.
 
 ```javascript
 import * as Client from 'ye_olde_guestbook';
