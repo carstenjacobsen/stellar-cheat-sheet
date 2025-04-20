@@ -52,4 +52,5 @@ let { result } = await guestbook.read_message({
 ```
 
 ## Links
+- [Guestbook sample dapp](https://developers.stellar.org/docs/build/apps/guestbook)
 - [Build a Hello World Frontend](https://developers.stellar.org/docs/build/smart-contracts/getting-started/hello-world-frontend)
