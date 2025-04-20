@@ -34,23 +34,25 @@ pnpm add file:./packages/<project_name>
 ```
 
 ## Use Bindings
-This example is a simplified version of a contract function call in the [guestbook sample dapp](https://developers.stellar.org/docs/build/apps/guestbook), but it serves well as an example of how the bindings can be implemented.
+This example is a simplified version of a contract function call in the [Hello World sample dapp](https://developers.stellar.org/docs/build/smart-contracts/getting-started/hello-world-frontend)), but it serves well as an example of how the bindings can be implemented.
 
-First the package is imported, and a guestbook client is instantiated, with the appropriate network settings, in this case testnet. The read_message() contract function can now be invoked using the guestbook binding client.
+First the package is imported, and a client is instantiated, with the appropriate network settings, in this case testnet. The hello() contract function can now be invoked using the frontend binding client.
 
 ```javascript
-import * as Client from 'ye_olde_guestbook';
+---
+import * as Client from '<project_name>';
 
-const guestbook = new Client.Client({
+const contract = new Client.Client({
    ...Client.networks.testnet,
-   rpcUrl: PUBLIC_STELLAR_RPC_URL,
+   rpcUrl: 'https://soroban-testnet.stellar.org:443'
 });
 
-let { result } = await guestbook.read_message({
-   message_id: parseInt(params.id),
-});
+const { result } = await contract.hello({to: "Devs!"});
+const greeting = result.join(" ");
+---
+
+<h1>{greeting}</h1>
 ```
 
 ## Links
-- [Guestbook sample dapp](https://developers.stellar.org/docs/build/apps/guestbook)
 - [Build a Hello World Frontend](https://developers.stellar.org/docs/build/smart-contracts/getting-started/hello-world-frontend)
