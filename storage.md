@@ -19,4 +19,39 @@ const COUNTER: Symbol = symbol_short!("COUNTER");
 let mut val: u32 = env.storage().persistent().get(&COUNTER).unwrap_or(0);
 ```
 
+## Temporary Storage
+This storage type is used for storing data on the network over an indefinitely long time period.
+
+#### Set Value
+```rust
+const COUNTER: Symbol = symbol_short!("COUNTER");
+let count: u32 = 1;
+
+env.storage().persistent().set(&COUNTER, &count);
+```
+
+#### Get Value
+```rust
+const COUNTER: Symbol = symbol_short!("COUNTER");
+
+let mut val: u32 = env.storage().persistent().get(&COUNTER).unwrap_or(0);
+```
+
+## Instance Storage
+This storage type is used for storing data on the network over an indefinitely long time period.
+
+#### Set Value
+```rust
+const COUNTER: Symbol = symbol_short!("COUNTER");
+let count: u32 = 1;
+
+env.storage().persistent().set(&COUNTER, &count);
+```
+
+#### Get Value
+```rust
+const COUNTER: Symbol = symbol_short!("COUNTER");
+
+let mut val: u32 = env.storage().persistent().get(&COUNTER).unwrap_or(0);
+```
 
