@@ -4,12 +4,12 @@ Smart contracts can persist data in the Stellar ledger using the storage interfa
 ## Persistent Storage
 This storage type is used for storing data on the network over an indefinitely long time period.
 
-### Set Value
+#### Set Value
 ```rust
 env.storage().persistent().set(&key, &value);
 ```
 
-### Get Value
+#### Get Value
 ```rust
 let mut val: u32 = env.storage().persistent().get(&key).unwrap_or(0);
 ```
