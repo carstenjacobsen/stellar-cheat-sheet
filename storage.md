@@ -11,7 +11,7 @@ env.storage().persistent().set(&key, &value);
 
 ### Get Value
 ```rust
-let mut val: u32 = env.storage().persistent().get(&key, &value).unwrap_or(0);
+let mut val: u32 = env.storage().persistent().get(&key).unwrap_or(0);
 ```
 
 
