@@ -28,14 +28,14 @@ Instance storage is a small, limited-size map attached to the contract instance.
 const COUNTER: Symbol = symbol_short!("COUNTER");
 let count: u32 = 1;
 
-env.storage().persistent().set(&COUNTER, &count);
+env.storage().instance().set(&COUNTER, &count);
 ```
 
 #### Get Value
 ```rust
 const COUNTER: Symbol = symbol_short!("COUNTER");
 
-let mut val: u32 = env.storage().persistent().get(&COUNTER).unwrap_or(0);
+let mut val: u32 = env.storage().instance().get(&COUNTER).unwrap_or(0);
 ```
 
 
@@ -47,14 +47,14 @@ As the name implies, temporary storage stores data only for a certain time perio
 const COUNTER: Symbol = symbol_short!("COUNTER");
 let count: u32 = 1;
 
-env.storage().persistent().set(&COUNTER, &count);
+env.storage().temporary().set(&COUNTER, &count);
 ```
 
 #### Get Value
 ```rust
 const COUNTER: Symbol = symbol_short!("COUNTER");
 
-let mut val: u32 = env.storage().persistent().get(&COUNTER).unwrap_or(0);
+let mut val: u32 = env.storage().temporary().get(&COUNTER).unwrap_or(0);
 ```
 
 
