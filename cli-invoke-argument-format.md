@@ -4,14 +4,13 @@ WHen you invoke commands in the Stellar CLI, arguments have to be formatted a ce
 | Type         | Example Format                                | Notes |
 |--------------|-----------------------------------------------|-------|
 | **Integer (i32/u32/i64/u64)** | `42` | Auto-detected as int |
-| **Big Int (i128/u128)** | `1234567890123456789` <br> `--arg u128:9876543210123456789` | Must prefix with type |
-| **Boolean**  | `true` <br> `--arg false` | Lowercase only |
+| **Big Int (i128/u128)** | `1234567890123456789` <br> `9876543210123456789` |  |
+| **Boolean**  | `true` <br> `false` | Lowercase only |
 | **String**   | `"hello world"` | Use quotes for spaces |
 | **Symbol**   | `transfer` <br> `USD` | Cheap identifier, like enums |
 | **Address**  | `GCFX...XYZ` <br> `CABC...DEF` | Works for G-accounts & C-contracts |
-| **Bytes**    | `--arg 0xdeadbeef` | Hex-encoded |
 | **Vector (Array)** | `'[1,2,3]'` <br> `'[buy, sell]'` | Enclose in `[...]` |
 | **Map (Key-Value)** | `'{name:"Alice"}'` <br> `'{age:30, active:true}'` | Enclose in `{...}` |
-| **Struct (Custom type)** | `'{name:"Bob", age:25}'` | Serialize as map with `sym:field:value` |
+| **Struct (Custom type)** | `'{name:"Bob", age:25}'` | Serialize as map with `field:value` |
 | **Nested**   | `'[{user:"Alice"}, {user:"Bob"}]'` | Supports nesting maps/vectors |
 
