@@ -3,7 +3,7 @@ WHen you invoke commands in the Stellar CLI, arguments have to be formatted a ce
 
 | Type         | Example Format                                | Notes |
 |--------------|-----------------------------------------------|-------|
-| **Integer (i32/u32/i64/u64)** | `42` | Auto-detected as int |
+| **Integer (i32/u32, i64/u64)** | `42` | Auto-detected as int |
 | **Big Int (i128/u128)** | `1234567890123456789` |  |
 | **Boolean**  | `true` <br> `false` | Lowercase only |
 | **String**   | `"hello world"` | Use quotes for spaces |
