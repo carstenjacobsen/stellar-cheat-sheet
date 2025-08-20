@@ -5,3 +5,4 @@
 - [Frontend Bindings](frontend-bindings.md)
 - [Storage](storage.md)
 - [Frontend Bindings](frontend-bindings.md)
+- [CLI Invoke Argument Format](cli-invoke-argument-format.md)
